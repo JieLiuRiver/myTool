@@ -94,21 +94,25 @@
 		{ view : 'imgInvalid', title : '自定义图形验证指令' },
 		{ view : 'searchFilter', title : '搜索框过滤功能' },
 		{ view : 'ui-sref', title : '通过ui-sref指令构建链接' },
-	        { view : 'service', title : '自定义服务Provider' },
-	        { view : '$q', title : '$q延迟' },
-	        { view : 'config', title : '服务的供应商xxxProvider' },
-	        { view : 'ngcache', title : '缓存服务ngcache' },
-	        { view : '$interpolate', title : '插值服务$interpolate'},
-	        { view : '$location', title : '$location服务 && $anchorScroll锚点跳转服务'},
-	        { view : '$http', title : '$http服务'},
-	        { view : '$angularTool', title : 'AngularJs常用工具'},
-	        { view : '$directiveContact', title : '指令之间的通信'},
-	        { view : 'drag', title : '自定义拖拽指令'},
-	        { view : 'tab', title : '自定义选项卡指令'},
-	        { view : 'tab', title : '自定义选项卡指令'},
-	        { view : 'newValid', title : '表单验证新方式'},
-	        { view : 'Fn', title : '面向对象写法 as' },
-	        { view : 'angularPlug', title : 'Angular等插件' }
+        { view : 'service', title : '自定义服务Provider' },
+        { view : '$q', title : '$q延迟' },
+        { view : 'config', title : '服务的供应商xxxProvider' },
+        { view : 'ngcache', title : '缓存服务ngcache' },
+        { view : '$interpolate', title : '插值服务$interpolate'},
+        { view : '$location', title : '$location服务 && $anchorScroll锚点跳转服务'},
+        { view : '$http', title : '$http服务'},
+        { view : '$angularTool', title : 'AngularJs常用工具'},
+        { view : '$directiveContact', title : '指令之间的通信'},
+        { view : 'drag', title : '自定义拖拽指令'},
+        { view : 'tab', title : '自定义选项卡指令'},
+        { view : 'tab', title : '自定义选项卡指令'},
+        { view : 'newValid', title : '表单验证新方式'},
+        { view : 'Fn', title : '面向对象写法 as' },
+        { view : 'angularPlug', title : 'Angular等插件'},
+        { view : 'angularPCA', title : '省市区自定义指令的使用'},
+        { view : 'angularPagination', title : '分页自定义指令的使用'},
+        { view : 'angularLoading', title : 'angularLoading加载过程中的效果的实现'},
+        { view : 'decimal', title : '关于小数点精度插件' }
 
 	];
 	var data_lodash = [
@@ -242,6 +246,10 @@
 				url : '/angularPlug',
 				templateUrl : 'angularJs/angularPlug.html'
 			})
+			.state('angularPagination',{
+				url : '/angularPagination',
+				templateUrl : 'angularJs/angularPagination.html'
+			})
 			.state('strDate',{
 				url : '/strDate',
 				templateUrl : 'strDate.html'
@@ -286,6 +294,10 @@
 				url : '/Fn',
 				templateUrl : 'angularJs/Fn.html'
 			})
+			.state('angularLoading',{
+				url : '/angularLoading',
+				templateUrl : 'angularJs/angularLoading.html'
+			})
 			.state('drag',{
 				url : '/drag',
 				templateUrl : 'angularJs/drag.html'
@@ -329,6 +341,10 @@
 			.state('ng-focus',{
 				url : '/ng-focus',
 				templateUrl : 'angularJs/ng-focus.html'
+			})
+			.state('decimal',{
+				url : '/decimal',
+				templateUrl : 'angularJs/decimal.html'
 			})
 			.state('ng-hide',{
 				url : '/ng-hide',
@@ -402,6 +418,10 @@
 				url : '/ng-value',
 				templateUrl : 'angularJs/ng-value.html'
 			})
+			.state('angularPCA',{
+				url : '/angularPCA',
+				templateUrl : 'angularJs/angularPCA.html'
+			})
 			.state('invalid',{
 				url : '/invalid',
 				templateUrl : 'angularJs/invalid.html'
@@ -414,38 +434,38 @@
 			   url : '/$route-service',
 			   templateUrl : 'angularJs/$route-service.html'
 		   	})
-		            .state('register',{
-		                url : '/register',
-		                templateUrl : 'angularJs/register.html'
-		            })
-		            .state('service',{
-		                       url : '/service',
-		                       templateUrl : 'angularJs/service.html'
-		                   })
-		            .state('$q',{
-		                       url : '/$q',
-		                       templateUrl : 'angularJs/$q.html'
-		                   })
-		            .state('config',{
-		                       url : '/config',
-		                       templateUrl : 'angularJs/config.html'
-		                   })
-		            .state('ngcache',{
-		                       url : '/ngcache',
-		                       templateUrl : 'angularJs/ngcache.html'
-		                   })
-		            .state('$interpolate',{
-		                       url : '/$interpolate',
-		                       templateUrl : 'angularJs/$interpolate.html'
-		                   })
-		            .state('$location',{
-		                       url : '/$location',
-		                       templateUrl : 'angularJs/$location.html'
-		                   })
-		            .state('$http',{
-		                       url : '/$http',
-		                       templateUrl : 'angularJs/$http.html'
-		                   })
+            .state('register',{
+                url : '/register',
+                templateUrl : 'angularJs/register.html'
+            })
+            .state('service',{
+                       url : '/service',
+                       templateUrl : 'angularJs/service.html'
+                   })
+            .state('$q',{
+                       url : '/$q',
+                       templateUrl : 'angularJs/$q.html'
+                   })
+            .state('config',{
+                       url : '/config',
+                       templateUrl : 'angularJs/config.html'
+                   })
+            .state('ngcache',{
+                       url : '/ngcache',
+                       templateUrl : 'angularJs/ngcache.html'
+                   })
+            .state('$interpolate',{
+                       url : '/$interpolate',
+                       templateUrl : 'angularJs/$interpolate.html'
+                   })
+            .state('$location',{
+                       url : '/$location',
+                       templateUrl : 'angularJs/$location.html'
+                   })
+            .state('$http',{
+                       url : '/$http',
+                       templateUrl : 'angularJs/$http.html'
+                   })
 			.state('$anchoring',{
 			   url : '/$anchoring',
 			   templateUrl : 'angularJs/$anchoring.html'
