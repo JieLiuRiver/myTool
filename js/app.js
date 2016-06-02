@@ -112,7 +112,10 @@
         { view : 'angularPCA', title : '省市区自定义指令的使用'},
         { view : 'angularPagination', title : '分页自定义指令的使用'},
         { view : 'angularLoading', title : 'angularLoading加载过程中的效果的实现'},
-        { view : 'decimal', title : '关于小数点精度插件' }
+        { view : 'commobox', title : '自定义的下拉列表框标签指令commobox' },
+        { view : 'decimal', title : '关于小数点精度插件' },
+        { view : 'comboxtable', title : '下拉列表表格分页，标签指令使用' },
+        { view : 'ui-tree', title : 'angular-ui-tree插件使用' }
 
 	];
 	var data_lodash = [
@@ -269,6 +272,18 @@
 			.state('getHowManyWeek',{
 				url : '/getHowManyWeek',
 				templateUrl : 'getHowManyWeek.html'
+			})
+			.state('commobox',{
+				url : '/commobox',
+				templateUrl : 'angularJs/commobox.html'
+			})
+			.state('ui-tree',{
+				url : '/ui-tree',
+				templateUrl : 'angularJs/ui-tree.html'
+			})
+			.state('comboxtable',{
+				url : '/comboxtable',
+				templateUrl : 'angularJs/comboxtable.html'
 			})
 			.state('format',{
 				url : '/format',
